@@ -40,18 +40,18 @@
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
-- Where can I see your demo?
-- What was your experience?
-- What have you learned/improved?
-- Your wisdom? :)
+- Where can I see your demo?  - The project can be visited at [LINK]
+- What was your experience? - It has been a medium difficulty project that has made me learn many aspects I didn't know about React, as well as to learn how to use Supabase.
+- What have you learned/improved? - Habilidades de programación, bases de datos y diseño
+- Your wisdom? - Doing projects is the only way to really learn how to program.
 
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [SupaBase](https://supabase.com/)
 
 ## Features
 
@@ -59,33 +59,29 @@ Introduce your projects by taking a screenshot or a gif. Try to tell visitors a 
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP) was to build an application to complete the given user stories.
 
+- User story: I can see a list of photos in the masonry layout that I have added ✅
+- User story: I can add a new photo to the list - the new photo should be on top of the list ✅
+- User story: I can search for photos by label ✅
+- User story: When I hover a photo, I can see a label and a delete button ✅
+- User story: I can delete images ✅
+
 ## How To Use
 
 <!-- Example: -->
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
-
-```bash
-# Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
-
-# Install dependencies
-$ npm install
-
-# Run the app
-$ npm start
-```
+All you have to do is access the project link
 
 ## Acknowledgements
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
+- [Figma](https://www.figma.com/)
 - [Node.js](https://nodejs.org/)
 - [Marked - a markdown parser](https://github.com/chjj/marked)
+- [React Router](https://reactrouter.com/en/main)
+- [React-tastify](https://fkhadra.github.io/react-toastify/introduction/)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- GitHub [@mdimassimo](https://github.com/mdimassimo)
+- Twitter [@mdimassimo_](https://twitter.com/mdimassimo_)
