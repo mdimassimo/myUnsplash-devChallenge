@@ -37,8 +37,7 @@ function App() {
     } else {
       setIsAuthenticated(false);
     }
-  }, []); // Deja la dependencia vacía para que se ejecute solo una vez al cargar la página
-
+  }, []);
   return (
     <BrowserRouter>
       <Routes>

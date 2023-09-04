@@ -1,4 +1,7 @@
-header {
+/* HEADER
+ */
+ 
+ header {
   display: flex;
   margin: 0 99px;
 }
@@ -66,30 +69,10 @@ body {
   float: right;
 }
 
-.avatar_container{
-  width: 200px;
-  margin-top: 32px;
-}
+/* MAIN BOARD
+ */
 
-.avatar_image{
-  padding: 10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-  background: black;
-  float: right;
-}
-
-.avatar_initial{
-  color: white;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 20%;
-}
-
-.photoboard{
+ .photoboard{
   display: flex;
   margin: 76px 99px;
 }
@@ -212,6 +195,9 @@ button:focus, button:focus-visible {
   border-radius: 16px;
 }
 
+/* UPLOAD MODAL
+ */
+
 .uploadModal {
   position: absolute;
   right: 0;
@@ -314,7 +300,7 @@ button:focus, button:focus-visible {
 	}
 }
 
-/* Login Page */
+/* LOGIN PAGE */
 
 .LoginPage {
   height: 100%;
@@ -489,6 +475,7 @@ button:focus, button:focus-visible {
 }
 
 /* Spinner */
+
 .spinner {
   margin-top: 10%;
   display: flex;
@@ -547,6 +534,7 @@ button:focus, button:focus-visible {
 }
 
 /* spinner dot */
+
 .dot-pulse {
   --uibpulse-size: 40px;
   --uibpulse-speed: 1.3s;
@@ -610,8 +598,8 @@ button:focus, button:focus-visible {
 }
 @keyframes l1 {to{transform: rotate(.5turn)}}
 
-/* MEDIA QUERIES
- */
+/* MEDIA QUERIES */
+
 @media screen and (max-width: 768px) {
 
   header{

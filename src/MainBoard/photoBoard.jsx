@@ -89,7 +89,8 @@ const deleteFile = async (urlFile, id) => {
       .remove([`${id}/${nameFileFinal}`]);
 
     if (storageError) {
-      console.log("Error al eliminar el archivo:", storageError);
+      console.log(storageError);
+        setDeletingFile(false)
     } else {
       const { error: deleteError } = await supabase
         .from('labels')
@@ -98,7 +99,8 @@ const deleteFile = async (urlFile, id) => {
         .eq('url_image', nameFileFinal);
 
       if (deleteError) {
-        console.log("Error al eliminar el registro:", deleteError);
+        console.log(deleteError);
+        setDeletingFile(false)
       } else {
         setTimeout(() => {
           namesPhotos= [];
@@ -108,7 +110,7 @@ const deleteFile = async (urlFile, id) => {
       }
     }
   } catch (error) {
-    console.error("Error general:", error);
+    console.error(error);
   }
 }; 
 
@@ -134,7 +136,6 @@ const searchPhotos = async (id, searchTerm) =>{
           photo.url === match && matchingPhotos.push(photo)
         })
       })     
-      console.log(matchingPhotos)
       if (matchingPhotos.length != 0){
         setErrorMatch(false)
         setDataRenderized(matchingPhotos)
