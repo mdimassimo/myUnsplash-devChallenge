@@ -1,25 +1,3 @@
-/* import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainBoard from './MainBoard/mainBoard';
-import LoginPage from './LoginPage/login';
-
-function App() {
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' Component={MainBoard}/>
-        <Route path='/login' Component={LoginPage}/>
-      </Routes>
-    </BrowserRouter>
-  )
-}
-
-export default App;
-
-
- */
-
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
