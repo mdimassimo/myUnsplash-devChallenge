@@ -672,6 +672,7 @@ button:focus, button:focus-visible {
   
   .LoginPage_container-login {
     width: 100%;
+    position: relative;
   }
 
   .LoginPage_container-image{
