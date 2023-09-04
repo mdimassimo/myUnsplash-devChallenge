@@ -350,7 +350,7 @@ button:focus, button:focus-visible {
 .Login-form {
   display: flex;
   flex-direction: column;
-  padding: 5% 10% 10% 10%;
+  padding: 5% 10% 10% 10%; /* fix before mask */
   animation: switchForm 0.3s ease 0s 1 normal forwards;
 }
 
