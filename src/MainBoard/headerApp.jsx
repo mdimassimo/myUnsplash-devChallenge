@@ -43,6 +43,9 @@ function ModalUpload({idUser, uploadingImage}){
     const uploadImage = async (event) => {
         event.preventDefault();
         const imageUrl = event.target.url.value;
+        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+        const proxyFunctionUrl = supabaseUrl+ '/functions/proxyFunction?url=' + encodeURIComponent(imageUrl);//--> Proxy
         const url = new URL(imageUrl);
         const pathWithoutParams = url.pathname;
         const labels = event.target.label.value;
@@ -53,10 +56,13 @@ function ModalUpload({idUser, uploadingImage}){
         setUploading(true);
     
         try {
-            const response = await fetch(imageUrl, {
-                cors: true,
+            const response = await fetch(proxyFunctionUrl, {
+                headers:{
+                    'apikey': supabaseKey
+                },
             });
-            const imageBlob = await response.blob();
+            
+            const imageBlob = new Blob([Uint8Array.from(atob(response.body), char => char.charCodeAt(0))], { type: 'image/jpeg' });
 
             if (imageBlob.size > 0){
                 const { data, error } = await supabase.storage
