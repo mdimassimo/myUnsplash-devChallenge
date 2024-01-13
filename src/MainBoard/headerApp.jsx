@@ -158,7 +158,7 @@ export default function HeaderApp({idUser, setHasUploaded, setLabelSearched}){
 
     const logout = async () => {
         const { error } = await supabase.auth.signOut();
-        window.location.href = "http://localhost:5173/login";
+        window.location.href = "https://munsplash-devchallenge.vercel.app/login";
     }
 
     return(

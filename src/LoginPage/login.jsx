@@ -68,7 +68,7 @@ function LoginPage(){
             if (error){
                 notifyErrorLogin();
             } else{
-                window.location.href = 'http://localhost:5173/';                    
+                window.location.href = 'https://munsplash-devchallenge.vercel.app/';                    
           }
         } catch(error){
             notifyErrorLogin();

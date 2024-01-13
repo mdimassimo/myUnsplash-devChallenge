@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://munsplash-devchallenge.vercel.app/">
       Demo
     </a>
     <span> | </span>
@@ -40,7 +40,11 @@
 
 Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
 
+<<<<<<< HEAD
 - Where can I see your demo?  - The project can be visited at [LINK]
+=======
+- Where can I see your demo?  - The project can be visited [here](https://munsplash-devchallenge.vercel.app/)
+>>>>>>> 29e3cc2fbeca01b0f054c2b089993bb66400ee64
 - What was your experience? - It has been a medium difficulty project that has made me learn many aspects I didn't know about React, as well as to learn how to use Supabase.
 - What have you learned/improved? - Habilidades de programación, bases de datos y diseño
 - Your wisdom? - Doing projects is the only way to really learn how to program.
@@ -69,7 +73,11 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 <!-- Example: -->
 
+<<<<<<< HEAD
 All you have to do is access the project link
+=======
+All you have to do is access the project link: https://munsplash-devchallenge.vercel.app/
+>>>>>>> 29e3cc2fbeca01b0f054c2b089993bb66400ee64
 
 ## Acknowledgements
 
@@ -84,4 +92,8 @@ All you have to do is access the project link
 ## Contact
 
 - GitHub [@mdimassimo](https://github.com/mdimassimo)
+<<<<<<< HEAD
 - Twitter [@mdimassimo_](https://twitter.com/mdimassimo_)
+=======
+- Twitter [@mdimassimo_](https://twitter.com/mdimassimo_)
+>>>>>>> 29e3cc2fbeca01b0f054c2b089993bb66400ee64
