@@ -1,32 +1,27 @@
-const { createClient } = require('@supabase/supabase-js');
+import { corsHeaders } from "./cors"
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+console.log(`Function "browser-with-cors" up and running!`)
 
-// Configura la función Proxy
-const functionName = 'proxyFunction';
-const functionDefinition = `
-  const fetch = require('node-fetch');
+Deno.serve(async (req) => {
+  // This is needed if you're planning to invoke your function from a browser.
+  if (req.method === 'OPTIONS') {
+    return new Response('ok', { headers: corsHeaders })
+  }
 
-  exports.handler = async (event, context) => {
-    try {
-      const imageUrl = event.queryStringParameters.url;
-      const response = await fetch(imageUrl);
-      const imageBuffer = await response.buffer();
-
-      return {
-        statusCode: 200,
-        body: imageBuffer.toString('base64'),
-        isBase64Encoded: true,
-      };
-    } catch (error) {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({ error: 'Error fetching image' }),
-      };
+  try {
+    const { name } = await req.json()
+    const data = {
+      message: `Hello ${name}!`,
     }
-  };
-`;
 
-supabase.createFunction(functionName, functionDefinition);
+    return new Response(JSON.stringify(data), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 200,
+    })
+  } catch (error) {
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 400,
+    })
+  }
+})
