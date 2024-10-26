@@ -40,78 +40,12 @@ function ModalUpload({idUser, uploadingImage}){
         modalShown ? setModalShown(false) : setModalShown(true)
     }
 
-    // const uploadImage = async (event) => {
-    //     event.preventDefault();
-    //     const imageUrl = event.target.url.value;
-    //     const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-    //     const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-    //     const proxyFunctionUrl = supabaseUrl+ '/functions/v1/proxyFunction?url=' + encodeURIComponent(imageUrl);//--> Proxy
-    //     console.log(proxyFunctionUrl);
-    //     const url = new URL(imageUrl);
-    //     const pathWithoutParams = url.pathname;
-    //     const labels = event.target.label.value;
-    //     const labelsSeparated = labels.replace(/\s/g, '').split(',');
-    //     const namePhoto = pathWithoutParams.split('/');
-    //     const namePhotoUploaded = namePhoto[namePhoto.length - 1];
-
-    //     setUploading(true);
-    
-    //     try {
-    //         const response = await fetch(proxyFunctionUrl, {
-    //             method: 'OPTIONS',
-    //             headers:{
-    //                 'apikey': supabaseKey,
-    //                 'Access-Control-Request-Method': 'GET'
-    //             },
-    //         });
-            
-    //         const imageBlob = new Blob([Uint8Array.from(atob(response.body), char => char.charCodeAt(0))], { type: 'image/jpeg' });
-
-    //         if (imageBlob.size > 0){
-    //             const { data, error } = await supabase.storage
-    //                 .from('try')
-    //                 .upload(`${idUser}/${namePhotoUploaded}`, imageBlob, {
-    //                     cacheControl: '3600',
-    //                     upsert: false,
-    //                 });
-        
-    //             if (error) {
-    //                 errorLoadingImage();
-    //                 setUploading(false);
-    //             } else {
-    //                 event.target.label.value = '';
-    //                 event.target.url.value = '';
-    //                 setModalShown(true);
-    //                 uploadingImage();
-    //                 labelsSeparated.map(async (label, index)=>{
-    //                     const { error } = await supabase
-    //                     .from('labels')
-    //                     .insert({ id_user: idUser, name_label: label, url_image: namePhotoUploaded })
-    //                 })
-    //                 setUploading(false);
-    //             } 
-    //         } else {
-    //             errorLoadingImage();
-    //             setUploading(false);
-    //             return 
-    //         }
-
-    //     } catch (error) {
-    //         errorLoadingImage();
-    //         setUploading(false);
-    //     }
-    // };
-
     const uploadImage = async (event) => {
         event.preventDefault();
         const imageUrl = event.target.url.value;
         const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
         const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-        console.log(supabaseKey);
-        console.log(supabaseUrl);
         const proxyFunctionUrl = `${supabaseUrl}/functions/v1/proxyFunction?url=${encodeURIComponent(imageUrl)}`;
-        console.log(proxyFunctionUrl);
-        console.log(proxyFunctionUrl);
         const url = new URL(imageUrl);
         const pathWithoutParams = url.pathname;
         const labels = event.target.label.value;

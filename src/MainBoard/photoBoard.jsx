@@ -89,7 +89,6 @@ const deleteFile = async (urlFile, id) => {
       .remove([`${id}/${nameFileFinal}`]);
 
     if (storageError) {
-      console.log(storageError);
         setDeletingFile(false)
     } else {
       const { error: deleteError } = await supabase
